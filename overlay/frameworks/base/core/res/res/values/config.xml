@@ -284,6 +284,12 @@
     <!-- reference volume index for music stream to limit headphone volume and display warning -->
     <integer name="config_safe_media_volume_index">10</integer>
 
+    <!-- Touchkey light -->  
+    <bool name="config_button_brightness_support">true</bool>
+
+    <!-- Smart Pixels -->
+    <bool name="config_enableSmartPixels">true</bool>	
+
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
          Here are a few of them:
