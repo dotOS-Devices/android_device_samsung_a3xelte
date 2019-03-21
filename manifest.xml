@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Comments, Legal notices, etc. here -->
 <manifest version="1.0" type="device">
     <hal format="hidl">
         <name>android.hardware.audio</name>
@@ -48,7 +47,6 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.configstore</name>
-        <impl level="generic"></impl>
         <transport>hwbinder</transport>
         <version>1.1</version>
         <interface>
@@ -62,14 +60,12 @@
         <version>1.0</version>
         <interface>
             <name>ICryptoFactory</name>
-            <instance>widevine</instance>
             <instance>default</instance>
         </interface>
         <interface>
-             <name>IDrmFactory</name>
-             <instance>widevine</instance>
-             <instance>default</instance>
-         </interface>
+            <name>IDrmFactory</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gnss</name>
@@ -104,6 +100,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.health</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IHealth</name>
+            <instance>backup</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
         <version>3.0</version>
@@ -122,15 +127,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.memtrack</name>
-        <transport arch="32">passthrough</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMemtrack</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-     <hal format="hidl">
         <name>android.hardware.media.omx</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -140,6 +136,15 @@
         </interface>
         <interface>
             <name>IOmxStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.memtrack</name>
+        <transport arch="32">passthrough</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMemtrack</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -164,7 +169,7 @@
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.0</version>
         <interface>
             <name>IRadio</name>
             <instance>slot1</instance>
@@ -187,6 +192,10 @@
         <name>android.hardware.renderscript</name>
         <transport arch="32">passthrough</transport>
         <version>1.0</version>
+        <interface>
+            <name>IDevice</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
